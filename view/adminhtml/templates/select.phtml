@@ -1,0 +1,12 @@
+<?php
+
+use Magento\Backend\Block\Template;
+
+?>
+<?php /** @var Template $block */ ?>
+
+<div class="admin__field field <?= $block->getClone() ? 'field-to-clone' : 'field-clone' ?> " <?= $block->getClone() ? 'style="display:none;"' : '' ?>>
+    <div class="admin__field-control control">
+       <span>[X]</span><?= $block->getSelect()->toHtml() ?> <a href="#" class="clone_remove"><?= $block->getLabelRemoveRow() ?></a>
+    </div>
+</div>

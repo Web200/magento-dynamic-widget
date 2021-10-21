@@ -1,0 +1,47 @@
+<?php
+
+use Magento\Backend\Block\Template;
+
+?>
+<?php /** @var Template $block */ ?>
+
+<div class="admin__field field with-note">
+    <label class="label admin__field-label" data-ui-id="wysiwyg-widget-options-fieldset-element-select-parameters-template-label">
+        &nbsp;
+    </label>
+    <div class="admin__field-control control">
+        <a href="#" class="clone_new"><?= $block->getLabelAddRow() ?></a>
+    </div>
+</div>
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+
+        $(document).off('click', 'fieldset.dynamic .clone_new');
+        $(document).on('click', 'fieldset.dynamic .clone_new', function() {
+            $(this).parents('fieldset.dynamic')
+            .find('.field-to-clone')
+            .clone()
+            .removeClass('field-to-clone')
+            .addClass('field-clone')
+            .show()
+            .appendTo($(this).parents('fieldset.dynamic').find('.content'));
+            init();
+        });
+
+        $(document).off('click', 'fieldset.dynamic .clone_remove');
+        $(document).on('click', 'fieldset.dynamic .clone_remove', function() {
+            $(this).parents('.field-clone').remove();
+            init();
+        });
+
+        function init() {
+            $('fieldset.dynamic .content').sortable();
+        }
+
+        init();
+    });
+
+</script>
