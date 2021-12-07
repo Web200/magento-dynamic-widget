@@ -93,11 +93,11 @@ class Select extends Template implements RendererInterface
                 ->setForm($element->getForm())
                 ->setName($element->getName() . '[]')
                 ->setValues($element->getOptions())
-                ->setLabelRemoveRow($element->getLabelRemoveRow())
                 ->setValue($value);
             return $this->getLayout()->createBlock(Template::class)
                 ->setTemplate('Web200_DynamicWidget::select.phtml')
                 ->setSelect($select)
+                ->setLabelRemoveRow($element->getLabelRemoveRow())
                 ->setClone($clone)
                 ->toHtml();
         } catch (LocalizedException $exception) {
