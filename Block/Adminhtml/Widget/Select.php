@@ -11,23 +11,16 @@ use Magento\Framework\Data\Form\Element\Renderer\RendererInterface;
 use Magento\Framework\Exception\LocalizedException;
 
 /**
- * Class Dynamic
+ * Class Select
  *
- * @package   Web200\Dynamic\Block\Adminhtml\Widget
+ * @package   Web200\DynamicWidget\Block\Adminhtml\Widget
  * @author    Web200 <contact@web200.fr>
- * @copyright 2021 Web200
+ * @copyright 2024 Web200
  * @license   https://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * @link      https://www.web200.fr/
  */
 class Select extends Template implements RendererInterface
 {
-    /**
-     * Element factory
-     *
-     * @var Factory $elementFactory
-     */
-    protected $elementFactory;
-
     /**
      * Select constructor.
      *
@@ -36,13 +29,11 @@ class Select extends Template implements RendererInterface
      * @param array            $data
      */
     public function __construct(
-        Factory $elementFactory,
+        protected Factory $elementFactory,
         Template\Context $context,
         array $data = []
     ) {
         parent::__construct($context, $data);
-
-        $this->elementFactory = $elementFactory;
     }
 
     /**
