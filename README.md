@@ -1,3 +1,15 @@
+# Dynamic Select in Widget
+
+Magento 2 Module Dynamic Select in Widget
+
+## Installation
+
+```
+$ composer require "web200/magento-dynamic-widget"
+```
+
+## Features
+
 You can add / remove / reorder mulitple select in an Magento 2 widget
 
 ```
