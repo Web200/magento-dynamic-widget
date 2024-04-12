@@ -2,7 +2,7 @@
     "name": "web200/magento-dynamic-widget",
     "description": "Magento 2 Module Add dynamic widget",
     "require": {
-        "php": "^7.0"
+        "php": "^8.0"
     },
     "type": "magento2-module",
     "license": [

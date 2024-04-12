@@ -13,21 +13,14 @@ use Magento\Framework\ObjectManagerInterface;
 /**
  * Class Dynamic
  *
- * @package   Web200\Dynamic\Block\Adminhtml\Widget
+ * @package   Web200\DynamicWidget\Block\Adminhtml\Widget
  * @author    Web200 <contact@web200.fr>
- * @copyright 2021 Web200
+ * @copyright 2024 Web200
  * @license   https://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * @link      https://www.web200.fr/
  */
 class Dynamic extends Widget
 {
-    /**
-     * Object manager
-     *
-     * @var ObjectManagerInterface $objectManager
-     */
-    protected $objectManager;
-
     /**
      * Dynamic constructor.
      *
@@ -36,13 +29,11 @@ class Dynamic extends Widget
      * @param array                                     $data
      */
     public function __construct(
-        ObjectManagerInterface $objectManager,
+        protected ObjectManagerInterface $objectManager,
         Context $context,
         array $data = []
     ) {
         parent::__construct($context, $data);
-
-        $this->objectManager = $objectManager;
     }
 
     /**

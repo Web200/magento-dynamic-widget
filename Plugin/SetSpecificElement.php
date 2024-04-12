@@ -11,7 +11,7 @@ use Magento\Widget\Model\Config\Converter;
  *
  * @package   Web200\DynamicWidget\Plugin
  * @author    Web200 <contact@web200.fr>
- * @copyright 2021 Web200
+ * @copyright 2024 Web200
  * @license   https://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * @link      https://www.web200.fr/
  */
